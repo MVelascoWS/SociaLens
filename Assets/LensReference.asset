@@ -1,0 +1,374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: LensReference
+  m_EditorClassIdentifier: 
+  url: https://api.lens.dev
+  queries:
+  - name: Profile
+    type: 0
+    query: "query Profile{\n    profile(  request :{ profileId :\"0x02\"} ){\n       
+      id\n        name\n    }\n}"
+    queryString: profile
+    returnType: Profile
+    queryOptions:
+    - challenge
+    - verify
+    - txIdToTxHash
+    - explorePublications
+    - exploreProfiles
+    - pendingApprovalFollows
+    - doesFollow
+    - following
+    - followers
+    - followerNftOwnedTokenIds
+    - ping
+    - hasTxHashBeenIndexed
+    - enabledModuleCurrencies
+    - approvedModuleAllowanceAmount
+    - generateModuleCurrencyApprovalData
+    - profileFollowModuleBeenRedeemed
+    - enabledModules
+    - nfts
+    - nftOwnershipChallenge
+    - notifications
+    - profiles
+    - profile
+    - recommendedProfiles
+    - defaultProfile
+    - globalProtocolStats
+    - publications
+    - publication
+    - whoCollectedPublication
+    - profilePublicationsForSale
+    - allPublicationsTags
+    - search
+    - timeline
+    - userSigNonces
+    - claimableHandles
+    - claimableStatus
+    - profileOnChainIdentity
+    - profilePublicationRevenue
+    - publicationRevenue
+    - profileFollowRevenue
+    - rel
+    fields:
+    - index: 0
+      name: id
+      type: ProfileId
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ProfileId
+      - name: name
+        type: String
+      - name: bio
+        type: String
+      - name: followNftAddress
+        type: ContractAddress
+      - name: metadata
+        type: Url
+      - name: handle
+        type: Handle
+      - name: picture
+        type: ProfileMedia
+      - name: coverPicture
+        type: ProfileMedia
+      - name: ownedBy
+        type: EthereumAddress
+      - name: dispatcher
+        type: Dispatcher
+      - name: stats
+        type: ProfileStats
+      - name: followModule
+        type: FollowModule
+      - name: isDefault
+        type: Boolean
+      - name: attributes
+        type: Attribute
+      - name: onChainIdentity
+        type: OnChainIdentity
+      - name: isFollowedByMe
+        type: Boolean
+      - name: isFollowing
+        type: Boolean
+      hasChanged: 0
+    - index: 1
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ProfileId
+      - name: name
+        type: String
+      - name: bio
+        type: String
+      - name: followNftAddress
+        type: ContractAddress
+      - name: metadata
+        type: Url
+      - name: handle
+        type: Handle
+      - name: picture
+        type: ProfileMedia
+      - name: coverPicture
+        type: ProfileMedia
+      - name: ownedBy
+        type: EthereumAddress
+      - name: dispatcher
+        type: Dispatcher
+      - name: stats
+        type: ProfileStats
+      - name: followModule
+        type: FollowModule
+      - name: isDefault
+        type: Boolean
+      - name: attributes
+        type: Attribute
+      - name: onChainIdentity
+        type: OnChainIdentity
+      - name: isFollowedByMe
+        type: Boolean
+      - name: isFollowing
+        type: Boolean
+      hasChanged: 0
+    isComplete: 1
+  - name: explorePublications
+    type: 0
+    query: "query {\n    explorePublications{\n        items\n    }\n}"
+    queryString: explorePublications
+    returnType: ExplorePublicationResult
+    queryOptions:
+    - challenge
+    - verify
+    - txIdToTxHash
+    - explorePublications
+    - exploreProfiles
+    - pendingApprovalFollows
+    - doesFollow
+    - following
+    - followers
+    - followerNftOwnedTokenIds
+    - ping
+    - hasTxHashBeenIndexed
+    - enabledModuleCurrencies
+    - approvedModuleAllowanceAmount
+    - generateModuleCurrencyApprovalData
+    - profileFollowModuleBeenRedeemed
+    - enabledModules
+    - nfts
+    - nftOwnershipChallenge
+    - notifications
+    - profiles
+    - profile
+    - recommendedProfiles
+    - defaultProfile
+    - globalProtocolStats
+    - publications
+    - publication
+    - whoCollectedPublication
+    - profilePublicationsForSale
+    - allPublicationsTags
+    - search
+    - timeline
+    - userSigNonces
+    - claimableHandles
+    - claimableStatus
+    - profileOnChainIdentity
+    - profilePublicationRevenue
+    - publicationRevenue
+    - profileFollowRevenue
+    - rel
+    fields:
+    - index: 0
+      name: items
+      type: Publication
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: items
+        type: Publication
+      - name: pageInfo
+        type: PaginatedResultInfo
+      hasChanged: 0
+    isComplete: 1
+  - name: explorePublications2
+    type: 0
+    query: "query explorePublications2{\n    explorePublications{\n        items\n   
+      }\n}"
+    queryString: explorePublications
+    returnType: ExplorePublicationResult
+    queryOptions:
+    - challenge
+    - verify
+    - txIdToTxHash
+    - explorePublications
+    - exploreProfiles
+    - pendingApprovalFollows
+    - doesFollow
+    - following
+    - followers
+    - followerNftOwnedTokenIds
+    - ping
+    - hasTxHashBeenIndexed
+    - enabledModuleCurrencies
+    - approvedModuleAllowanceAmount
+    - generateModuleCurrencyApprovalData
+    - profileFollowModuleBeenRedeemed
+    - enabledModules
+    - nfts
+    - nftOwnershipChallenge
+    - notifications
+    - profiles
+    - profile
+    - recommendedProfiles
+    - defaultProfile
+    - globalProtocolStats
+    - publications
+    - publication
+    - whoCollectedPublication
+    - profilePublicationsForSale
+    - allPublicationsTags
+    - search
+    - timeline
+    - userSigNonces
+    - claimableHandles
+    - claimableStatus
+    - profileOnChainIdentity
+    - profilePublicationRevenue
+    - publicationRevenue
+    - profileFollowRevenue
+    - rel
+    fields:
+    - index: 0
+      name: items
+      type: Publication
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: items
+        type: Publication
+      - name: pageInfo
+        type: PaginatedResultInfo
+      hasChanged: 0
+    isComplete: 1
+  - name: challenge
+    type: 0
+    query: "query challenge{\n    challenge(  request :{ address :\"0xf12cc53c7070572326e57c30e88C687bbe71Db7c\"}
+      ){\n        text\n    }\n}"
+    queryString: challenge
+    returnType: AuthChallengeResult
+    queryOptions:
+    - challenge
+    - verify
+    - txIdToTxHash
+    - explorePublications
+    - exploreProfiles
+    - pendingApprovalFollows
+    - doesFollow
+    - following
+    - followers
+    - followerNftOwnedTokenIds
+    - ping
+    - hasTxHashBeenIndexed
+    - enabledModuleCurrencies
+    - approvedModuleAllowanceAmount
+    - generateModuleCurrencyApprovalData
+    - profileFollowModuleBeenRedeemed
+    - enabledModules
+    - nfts
+    - nftOwnershipChallenge
+    - notifications
+    - profiles
+    - profile
+    - recommendedProfiles
+    - defaultProfile
+    - globalProtocolStats
+    - publications
+    - publication
+    - whoCollectedPublication
+    - profilePublicationsForSale
+    - allPublicationsTags
+    - search
+    - timeline
+    - userSigNonces
+    - claimableHandles
+    - claimableStatus
+    - profileOnChainIdentity
+    - profilePublicationRevenue
+    - publicationRevenue
+    - profileFollowRevenue
+    - rel
+    fields:
+    - index: 0
+      name: text
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: text
+        type: String
+      hasChanged: 0
+    isComplete: 1
+  mutations:
+  - name: authenticate
+    type: 1
+    query: "mutation authenticate{\n    authenticate{\n        accessToken\n    }\n}"
+    queryString: authenticate
+    returnType: AuthenticationResult
+    queryOptions:
+    - authenticate
+    - refresh
+    - broadcast
+    - createSetDispatcherTypedData
+    - createFollowTypedData
+    - createUnfollowTypedData
+    - createSetFollowModuleTypedData
+    - createSetFollowNFTUriTypedData
+    - createToggleFollowTypedData
+    - createCollectTypedData
+    - createSetDefaultProfileTypedData
+    - createSetProfileImageURITypedData
+    - createSetProfileImageURIViaDispatcher
+    - createBurnProfileTypedData
+    - createPostTypedData
+    - createPostViaDispatcher
+    - createCommentTypedData
+    - createCommentViaDispatcher
+    - createMirrorTypedData
+    - hidePublication
+    - createMirrorViaDispatcher
+    - claim
+    - createSetProfileMetadataTypedData
+    - createSetProfileMetadataViaDispatcher
+    - addReaction
+    - removeReaction
+    - reportPublication
+    - ach
+    fields:
+    - index: 0
+      name: accessToken
+      type: Jwt
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: accessToken
+        type: Jwt
+      - name: refreshToken
+        type: Jwt
+      hasChanged: 0
+    isComplete: 1
+  subscriptions: []
+  loading: 0
